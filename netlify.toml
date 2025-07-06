@@ -1,0 +1,41 @@
+ [build]
+  # Build command to create the production build
+  command = "npm run build"
+  
+  # Directory where the built files are located
+  publish = "build"
+
+# Handle client-side routing for React Router
+[[redirects]]
+  # Redirect all routes to index.html for client-side routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for better performance and security
+[[headers]]
+  # Apply headers to all files
+  for = "/*"
+  [headers.values]
+    # Cache static assets for better performance
+    Cache-Control = "public, max-age=31536000, immutable"
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  # Apply different headers to HTML files
+  for = "*.html"
+  [headers.values]
+    # Don't cache HTML files to ensure fresh content
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Environment variables (if needed)
+[build.environment]
+  # Set Node.js version
+  NODE_VERSION = "18"
+  
+  # Set npm version
+  NPM_VERSION = "9"
