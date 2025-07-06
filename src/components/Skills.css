@@ -100,19 +100,95 @@
 .skills-ring.ring2 .skill-circle:nth-child(8) {
   left: 15%; top: 15%; transform: translate(-50%, -50%); }
 
+/* Enhanced Responsive Styles */
+@media (max-width: 768px) {
+  .skills-circles-container {
+    min-height: 400px;
+  }
+  
+  .skills-circles {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .skill-circle.core {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .skill-circle {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 600px) {
+  .skills-circles-container {
+    min-height: 350px;
+  }
+  
+  .skills-circles {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .skill-circle.core {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  
+  .skill-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-circles-container {
+    min-height: 300px;
+  }
+  
   .skills-circles {
     width: 250px;
     height: 250px;
   }
+  
   .skill-circle.core {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
+  
   .skill-circle {
     width: 32px;
     height: 32px;
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-circles-container {
+    min-height: 250px;
+  }
+  
+  .skills-circles {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .skill-circle.core {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .skill-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
   }
 } 
