@@ -9,6 +9,9 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Resume from './components/Resume';
+import LeetCodeGraph from './components/LeetCodeGraph';
+import GitHubGraph from './components/GitHubGraph';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -24,12 +27,11 @@ function App() {
         {/* Floating profile avatar, outside nav bar */}
         <div
           className="floating-profile-avatar"
-          onClick={handleToggleTheme}
-          title="Toggle light/dark mode"
+          onClick={() => window.location.pathname = '/resume'}
+          title="View Resume"
           tabIndex={0}
           role="button"
-          aria-label="Toggle theme"
-          onKeyPress={e => (e.key === 'Enter' || e.key === ' ') && handleToggleTheme()}
+          aria-label="View Resume"
         >
           <span>AC</span>
         </div>
@@ -40,6 +42,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/leetcode" element={<LeetCodeGraph />} />
+          <Route path="/github" element={<GitHubGraph />} />
         </Routes>
         
         <Footer />

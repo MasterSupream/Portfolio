@@ -87,53 +87,55 @@ function Skills() {
   const totalRings = skills.length - 1;
 
   return (
-    <section id="skills" style={{ textAlign: 'center', marginTop: '2rem' }}>
-      <h2>Skills</h2>
-      <div className="skills-circles-container">
-        <div
-          className={`skills-circles${revealed ? ' revealed' : ''}`}
-          style={{ width: containerSize, height: containerSize, position: 'relative' }}
-          onMouseEnter={() => setRevealed(true)}
-          onMouseLeave={() => setRevealed(false)}
-        >
-          {/* Render the core C always at center */}
+    <div className="route-content-wrapper">
+      <section id="skills" style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <h2>Skills</h2>
+        <div className="skills-circles-container">
           <div
-            className="skill-circle core"
-            style={{
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -50%)',
-              position: 'absolute',
-              zIndex: 20,
-              background: skillColors['C'],
-              color: '#fff',
-            }}
+            className={`skills-circles${revealed ? ' revealed' : ''}`}
+            style={{ width: containerSize, height: containerSize, position: 'relative' }}
+            onMouseEnter={() => setRevealed(true)}
+            onMouseLeave={() => setRevealed(false)}
           >
-            {skillIcons['C'] || 'C'}
+            {/* Render the core C always at center */}
+            <div
+              className="skill-circle core"
+              style={{
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                position: 'absolute',
+                zIndex: 20,
+                background: skillColors['C'],
+                color: '#fff',
+              }}
+            >
+              {skillIcons['C'] || 'C'}
+            </div>
+            {/* Render all other rings dynamically, spaced out */}
+            {skills.slice(1).map((ring, ringIdx) =>
+              ring.map((skill, i) => (
+                <div
+                  className="skill-circle"
+                  key={`ring${ringIdx + 1}-skill${i}`}
+                  style={{
+                    ...getCirclePosition(i, ring.length, getRingRadius(ringIdx, totalRings), revealed),
+                    background: skillColors[skill] || '#2196f3',
+                    color: ['JavaScript', 'SQL', 'React', 'TypeScript'].includes(skill) ? '#222' : '#fff',
+                    border: skill === 'Next.js' ? '2px solid #fff' : undefined,
+                  }}
+                >
+                  {skillIcons[skill] || skill}
+                </div>
+              ))
+            )}
           </div>
-          {/* Render all other rings dynamically, spaced out */}
-          {skills.slice(1).map((ring, ringIdx) =>
-            ring.map((skill, i) => (
-              <div
-                className="skill-circle"
-                key={`ring${ringIdx + 1}-skill${i}`}
-                style={{
-                  ...getCirclePosition(i, ring.length, getRingRadius(ringIdx, totalRings), revealed),
-                  background: skillColors[skill] || '#2196f3',
-                  color: ['JavaScript', 'SQL', 'React', 'TypeScript'].includes(skill) ? '#222' : '#fff',
-                  border: skill === 'Next.js' ? '2px solid #fff' : undefined,
-                }}
-              >
-                {skillIcons[skill] || skill}
-              </div>
-            ))
-          )}
         </div>
-      </div>
-      <p style={{ color: '#888', fontSize: '0.95rem', marginTop: '1rem' }}>
-        Hover over the C to reveal all skills!
-      </p>
-    </section>
+        <p style={{ color: '#888', fontSize: '0.95rem', marginTop: '1rem' }}>
+          Hover over the C to reveal all skills!
+        </p>
+      </section>
+    </div>
   );
 }
 

@@ -63,6 +63,12 @@ function Navigation({ theme }) {
           <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>
             Projects
           </Link>
+          <Link to="/leetcode" className={location.pathname === '/leetcode' ? 'active' : ''}>
+            LeetCode
+          </Link>
+          <Link to="/github" className={location.pathname === '/github' ? 'active' : ''}>
+            GitHub
+          </Link>
         </div>
       </div>
     </nav>

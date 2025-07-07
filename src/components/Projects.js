@@ -17,22 +17,24 @@ function Projects() {
   ];
 
   return (
-    <section id="projects">
-      <h2>Projects</h2>
-      {projects.map((project, index) => (
-        <div key={index} className="project">
-          <h3>{project.title}</h3>
-          <p>
-            {project.description}
-            {index === 2 && (
-              <span>
-                {' '}Check out my <a href="https://github.com/Anuvesh07" target="_blank" rel="noopener noreferrer">GitHub</a> for more.
-              </span>
-            )}
-          </p>
-        </div>
-      ))}
-    </section>
+    <div className="route-content-wrapper">
+      <section id="projects">
+        <h2>Projects</h2>
+        {projects.map((project, index) => (
+          <div key={index} className="project">
+            <h3>{project.title}</h3>
+            <p>
+              {project.description}
+              {index === 2 && (
+                <span>
+                  {' '}Check out my <a href="https://github.com/Anuvesh07" target="_blank" rel="noopener noreferrer">GitHub</a> for more.
+                </span>
+              )}
+            </p>
+          </div>
+        ))}
+      </section>
+    </div>
   );
 }
 

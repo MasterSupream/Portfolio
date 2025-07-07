@@ -14,7 +14,7 @@ body {
 }
 
 body.light-mode, .light-mode {
-  background: #f7fafc;
+  /* background: #f7fafc; */
   color: #23272e;
 }
 
@@ -25,7 +25,14 @@ body.light-mode, .light-mode {
   backdrop-filter: blur(12px);
 }
 
-.light-mode section, .light-mode header, .light-mode .project, .light-mode footer {
+.light-mode section {
+  background: transparent !important;
+  color: #23272e;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.light-mode header, .light-mode .project, .light-mode footer {
   background: #fff;
   color: #23272e;
   border: 1.5px solid #e2e8f0;
