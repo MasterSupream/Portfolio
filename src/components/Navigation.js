@@ -39,7 +39,6 @@ function Navigation({ theme }) {
           <span className="window-dot dot-yellow" onClick={() => handleDotClick('yellow')} tabIndex={0} role="button" aria-label="Minimize" />
           <span className="window-dot dot-green" onClick={() => handleDotClick('green')} tabIndex={0} role="button" aria-label="Maximize" />
         </div>
-        
         {/* Mobile hamburger menu */}
         <button 
           className="mobile-menu-toggle"
@@ -49,26 +48,13 @@ function Navigation({ theme }) {
         >
           <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}></span>
         </button>
-        
         <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
-            Home
-          </Link>
-          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>
-            About
-          </Link>
-          <Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''}>
-            Skills
-          </Link>
-          <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>
-            Projects
-          </Link>
-          <Link to="/leetcode" className={location.pathname === '/leetcode' ? 'active' : ''}>
-            LeetCode
-          </Link>
-          <Link to="/github" className={location.pathname === '/github' ? 'active' : ''}>
-            GitHub
-          </Link>
+          <Link to="/" className={`tab-home${location.pathname === '/' ? ' active' : ''}`}>Home</Link>
+          <Link to="/about" className={`tab-about${location.pathname === '/about' ? ' active' : ''}`}>About</Link>
+          <Link to="/skills" className={`tab-skills${location.pathname === '/skills' ? ' active' : ''}`}>Skills</Link>
+          <Link to="/projects" className={`tab-projects${location.pathname === '/projects' ? ' active' : ''}`}>Projects</Link>
+          <Link to="/leetcode" className={`tab-leetcode${location.pathname === '/leetcode' ? ' active' : ''}`}>LeetCode</Link>
+          <Link to="/github" className={`tab-github${location.pathname === '/github' ? ' active' : ''}`}>GitHub</Link>
         </div>
       </div>
     </nav>
