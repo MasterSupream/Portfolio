@@ -16,11 +16,6 @@ import GitHubGraph from './components/GitHubGraph';
 function App() {
   const [theme, setTheme] = useState('dark');
 
-  const handleToggleTheme = () => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
-    document.body.classList.toggle('light-mode');
-  };
-
   return (
     <Router>
       <div className={`App ${theme}-mode`}>
