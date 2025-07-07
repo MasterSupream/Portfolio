@@ -36,7 +36,6 @@ function App() {
           <span>AC</span>
         </div>
         <Navigation theme={theme} />
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -46,7 +45,6 @@ function App() {
           <Route path="/leetcode" element={<LeetCodeGraph />} />
           <Route path="/github" element={<GitHubGraph />} />
         </Routes>
-        
         <Footer />
         <ScrollToTop />
       </div>

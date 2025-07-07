@@ -13,66 +13,6 @@ body {
   min-height: 100vh;
 }
 
-body.light-mode, .light-mode {
-  /* background: #f7fafc; */
-  color: #23272e;
-}
-
-.light-mode .navigation {
-  background: rgba(240, 243, 248, 0.92);
-  border: 1.5px solid #d1d5db;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  backdrop-filter: blur(12px);
-}
-
-.light-mode section {
-  background: transparent !important;
-  color: #23272e;
-  border: 1.5px solid #e2e8f0;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-}
-
-.light-mode header, .light-mode .project, .light-mode footer {
-  background: #fff;
-  color: #23272e;
-  border: 1.5px solid #e2e8f0;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-}
-
-.light-mode .nav-links button,
-.light-mode .nav-links a {
-  color: #23272e;
-  background: rgba(96, 165, 250, 0.07);
-}
-
-.light-mode .nav-links button:hover,
-.light-mode .nav-links a:hover {
-  background: #ffbd2e;
-  color: #23272e;
-}
-
-.light-mode .nav-links a.active {
-  background: rgba(255, 189, 46, 0.15);
-  color: #23272e;
-  box-shadow: 0 4px 12px rgba(255, 189, 46, 0.3);
-}
-
-.light-mode .nav-avatar {
-  background: #f7fafc;
-  color: #23272e;
-  border: 2px solid #e2e8f0;
-}
-
-.light-mode .window-dot {
-  border: 1.5px solid #d1d5db;
-}
-
-.light-mode .window-dot:focus, .light-mode .window-dot:hover {
-  box-shadow: 0 0 0 2px #ffbd2e44;
-  border: 1.5px solid #ffbd2e;
-  outline: none;
-}
-
 /* Navigation Styles */
 .navigation {
   position: fixed;
@@ -148,10 +88,8 @@ body.light-mode, .light-mode {
   margin-left: auto;
 }
 
-.nav-links button,
-.nav-links a {
-  background: transparent;
-  color: #e2e8f0;
+.nav-links button {
+  background: none;
   border: none;
   font-family: 'Ubuntu', 'DejaVu Sans', 'Segoe UI', 'Roboto', Arial, sans-serif;
   font-weight: 500;
@@ -161,18 +99,6 @@ body.light-mode, .light-mode {
   transition: background 0.2s, color 0.2s, transform 0.2s;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 1.5px 6px rgba(102, 126, 234, 0.07);
-  background: rgba(102, 126, 234, 0.07);
-  will-change: transform;
-  animation: floatBtn 2.7s ease-in-out infinite alternate;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
-
-@keyframes floatBtn {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-3px) scale(1.03); }
 }
 
 .nav-links button::before,
@@ -187,11 +113,10 @@ body.light-mode, .light-mode {
   transition: left 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
-.nav-links button:hover,
-.nav-links a:hover {
-  background: rgba(255,255,255,0.08);
-  color: #ffbd2e;
-  transform: scale(1.07);
+.nav-links button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transform: translateY(-2px);
 }
 
 .nav-links button:hover::before,

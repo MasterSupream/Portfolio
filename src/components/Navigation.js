@@ -31,6 +31,13 @@ function Navigation({ theme }) {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Interactive window dot handlers
+  const handleDotClick = (color) => {
+    if (color === 'red') alert('Close (Demo)');
+    if (color === 'yellow') alert('Minimize (Demo)');
+    if (color === 'green') alert('Maximize (Demo)');
+  };
+
   return (
     <nav className={`navigation${isScrolled ? ' scrolled' : ''}`} aria-label="Main Navigation">
       <div className="nav-container">
