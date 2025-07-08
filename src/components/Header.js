@@ -30,7 +30,7 @@ function Header() {
             <span>GitHub</span>
           </a>
           <a
-            href="https://linkedin.com/in/anuvesh-chilwal"
+            href="https://www.linkedin.com/in/anuvesh-chilwal-891382357"
             className="header-social-btn linkedin"
             aria-label="LinkedIn"
             target="_blank"
