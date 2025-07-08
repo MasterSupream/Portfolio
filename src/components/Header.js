@@ -1,47 +1,43 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import './Header.css';
 
 function Header() {
   return (
-    <header id="header" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* YouTube video background */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0,
-        overflow: 'hidden',
-        pointerEvents: 'none',
-      }}>
-        <iframe
-          src="https://www.youtube.com/embed/zhDwjnYZiCo?autoplay=1&mute=1&controls=0&loop=1&playlist=zhDwjnYZiCo&modestbranding=1&showinfo=0&rel=0"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          style={{
-            width: '100vw',
-            height: '100vh',
-            minWidth: '100%',
-            minHeight: '100%',
-            objectFit: 'cover',
-            pointerEvents: 'none',
-          }}
-          title="Header Background Video"
-        />
-      </div>
-      <div className="header-content" style={{ position: 'relative', zIndex: 1 }}>
-        <h1>Anuvesh Chilwal</h1>
-        <p>Computer Science Student | Web & Java Developer</p>
-        <div className="social">
-          <a href="mailto:anuveshchilwal007@gmail.com">
-            <span>📧</span> Email
+    <header className="header">
+      <div className="header-content">
+        <h1 className="header-title">Anuvesh Chilwal</h1>
+        <p className="header-tagline">Computer Science Student | Web & Java Developer</p>
+        <div className="header-social">
+          <a
+            href="mailto:anuveshchilwal007@gmail.com"
+            className="header-social-btn email"
+            aria-label="Email"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelope />
+            <span>Email</span>
           </a>
-          <a href="https://github.com/Anuvesh07" target="_blank" rel="noopener noreferrer">
-            <span>🐙</span> GitHub
+          <a
+            href="https://github.com/Anuvesh07"
+            className="header-social-btn github"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+            <span>GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/anuvesh-chilwal" target="_blank" rel="noopener noreferrer">
-            <span>💼</span> LinkedIn
+          <a
+            href="https://linkedin.com/in/anuvesh-chilwal"
+            className="header-social-btn linkedin"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>

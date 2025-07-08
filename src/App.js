@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './components/Skills.css';
+import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <div className={`App`}>
+        <Header />
         {/* Floating profile avatar, outside nav bar */}
         <div
           className="floating-profile-avatar"
