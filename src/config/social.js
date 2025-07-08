@@ -1,11 +1,11 @@
 // Social media configuration
 export const SOCIAL_CONFIG = {
   twitter: {
-    url: 'https://twitter.com/messages/compose?recipient_id=YOUR_TWITTER_ID',
-    username: '@YourTwitterHandle'
+    url: 'https://x.com/AnuveshC7',
+    username: '@AnuveshC7'
   },
   discord: {
-    url: 'https://discord.gg/YOUR_DISCORD_INVITE',
+    url: 'https://discord.gg/dRcgUHf7j2',
     server: 'Your Discord Server'
   },
   email: {
